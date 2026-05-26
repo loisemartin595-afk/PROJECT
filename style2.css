@@ -1,0 +1,290 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+:root {
+    --primary-color: #4A2E1B;   /* Dark Coffee Brown */
+    --accent-color: #A07855;    /* Warm Tan/Brown Button */
+    --accent-hover: #866141;   /* Darker Tan for hover effects */
+    --bg-color: #FDFBF7;       /* Off-white / Cream background */
+    --text-color: #333333;     /* Dark grey for readability */
+    --form-bg: #ffffff;        /* Pure white for form inputs */
+    --border-color: #D1C7BD;   /* Soft brown/grey border */
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* ==========================================================================
+   2. Header & Navigation (Fixed & Aligned)
+   ========================================================================== */
+header {
+    background-color: var(--primary-color);
+    color: #ffffff;
+    padding: 15px 0;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 25px;
+}
+
+.nav-links a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.95rem;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: var(--accent-color);
+}
+
+/* ==========================================================================
+   3. Main Layout & Content Section
+   ========================================================================== */
+main {
+    flex: 1;
+    padding: 40px 0;
+}
+
+.section h1 {
+    text-align: center;
+    color: var(--primary-color);
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    position: relative;
+}
+
+/* ==========================================================================
+   4. Contact Page & Form Styling (The Big Fix)
+   ========================================================================== */
+.contact-intro {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 1.1rem;
+    color: #666;
+}
+
+/* Form Container Layout */
+form {
+    max-width: 600px;
+    margin: 0 auto 50px auto;
+    background: var(--form-bg);
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+/* Layout for individual form rows */
+.form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: var(--primary-color);
+}
+
+/* Styling Inputs, Select dropdowns, and Textareas consistently */
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    font-size: 1rem;
+    background-color: #fafafa;
+    transition: all 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    background-color: #ffffff;
+    box-shadow: 0 0 5px rgba(74, 46, 27, 0.2);
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+/* Beautiful, consistent button style */
+.btn-submit {
+    width: 100%;
+    background-color: var(--accent-color);
+    color: white;
+    padding: 14px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 10px;
+}
+
+.btn-submit:hover {
+    background-color: var(--accent-hover);
+}
+
+/* ==========================================================================
+   5. Contact Info Block (Call Us / Visit Us)
+   ========================================================================== */
+.contact-info-wrapper {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 30px;
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.info-box {
+    flex: 1;
+    min-width: 250px;
+    background: white;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.info-box h3 {
+    color: var(--primary-color);
+    font-size: 1.4rem;
+    margin-bottom: 15px;
+    border-bottom: 2px solid var(--bg-color);
+    padding-bottom: 8px;
+}
+
+.info-box p {
+    margin: 5px 0;
+    color: #555;
+}
+
+/* ==========================================================================
+   6. Footer Styling
+   ========================================================================== */
+footer {
+    background-color: var(--primary-color);
+    color: #ffffff;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 0.9rem;
+    margin-top: auto;
+}
+/* ----------------------------------------------------------
+   13. FOOTER
+   ---------------------------------------------------------- */
+footer {
+    background-color: var(--primary-color);
+    color: var(--white);
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 60px;
+}
+
+/* ----------------------------------------------------------
+   14. RESPONSIVE — TABLET & MOBILE (max-width: 768px)
+   ---------------------------------------------------------- */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+    }
+
+    h2 {
+        font-size: 2rem;
+    }
+
+    main h1 {
+        font-size: 2rem;
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+        color: var(--white);
+    }
+
+    /* Cards */
+    .grid-3-cols {
+        grid-template-columns: 1fr;
+    }
+
+    /* About */
+    .about-wrapper {
+        flex-direction: column;
+    }
+
+    /* Table */
+    table {
+        font-size: 0.9rem;
+    }
+
+    th, td {
+        padding: 12px 8px;
+    }
+
+    /* Form */
+    .form-box {
+        padding: 25px;
+        margin: 0 15px;
+    }
+}
+
+/* ----------------------------------------------------------
+   15. RESPONSIVE — SMALL SCREENS (max-width: 600px)
+   ---------------------------------------------------------- */
+@media (max-width: 600px) {
+    /* Horizontally scrollable table on very small screens */
+    table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+}

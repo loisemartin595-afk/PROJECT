@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../style2.css">
+</head>
+<body>
+     <header>
+        <div class="container">
+            <nav>
+                <div class="logo"><a href="../index.html">tambayan brew co.</a></div>
+                <ul class="nav-links">
+                    
+                    <li><a href="aboutus.html">About Us</a></li>
+                    <li><a href="service.html">Coffee & Food</a></li>
+                    <li><a href="menu.html">Menu & Pricing</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container section">
+    <h2>Contact Us</h2>
+
+    <p class="contact">
+        Have a question or want to order? Fill out the form below!
+    </p>
+
+    <div class="form-box">
+    
+        <form action="mailto:almondcharles.espiritu.mnl@eac.edu.ph?subject=Coffee Order"
+              method="post"
+              enctype="text/plain">
+
+            <div class="form-group">
+            <label for="name">Full Name</label>
+            <input type="text" id="name" placeholder="Write your name" required>
+        </div>
+
+        <div class="form-group">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" placeholder="Email" required>
+        </div>
+
+        <div class="form-group">
+            <label for="phone">Contact Number</label>
+            <input type="tel" id="phone" placeholder="Number">
+        </div>
+
+        <div class="form-group">
+            <label for="subject">Subject / Inquiry Type</label>
+            <select id="subject">
+                <option value="" disabled selected>Select an option</option>
+                <option value="order">Order Inquiry</option>
+                <option value="general">General Question</option>
+                <option value="feedback">Feedback</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" placeholder="How can we help you?"></textarea>
+        </div>
+
+        <button type="submit" class="btn-submit">Send Message</button>
+    </form>
+
+    <div class="contact-info-wrapper">
+        <div class="info-box">
+            <h3>Call to us</h3>
+            <p>09278821075</p>
+            <p>09943924595</p>
+        </div>
+
+        <div class="info-box">
+            <h3>Visit Us</h3>
+            <p>Lope De Vega Tower brgy 312 Sta, Cruz Manila Coffee</p>
+            <p><strong>Open Daily:</strong> 10:00 AM - 10:00 PM</p>
+        </div>
+    </div>
+</main>
